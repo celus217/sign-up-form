@@ -1,3 +1,9 @@
+@font-face {
+  font-family: dorian-gore;
+  src: url(dorian_gore/doriangore.ttf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +12,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: rgb(184, 176, 255);
+  background-color: rgb(240, 238, 255);
 }
 
 body {
@@ -16,70 +22,111 @@ body {
 }
 
 .left-side {
-  position: relative;
+  position: fixed;
   height: 100%;
-  flex: 0 1 40%;
+  width: clamp(300px, 40%, 500px);
+  background: url(eduardo-XaR1B8kn2Ck-unsplash.jpeg);
+  overflow: hidden;
 }
 
 .right-side {
+  margin-left: clamp(300px, 40%, 500px);
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  justify-content: space-between;
-  margin-top: 220px;
-  margin-bottom: 240px;
-  flex: 0 1 60%;
-}
-
-.bg {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
+  gap: 36px;
+  margin-top: 70px;
+  margin-bottom: 80px;
 }
 
 .logo {
+  font-family: dorian-gore, serif;
+  letter-spacing: 3px;
+  font-size: 40px;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 30%;
-  background-color: rgba(68, 68, 68, 50%);
-  width: 100%;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 16px;
   align-items: center;
+  position: absolute;
+  background-color: rgba(227, 227, 227, 0.5);
+  top: 25%;
+  height: 180px;
+  width: 100%;
 }
 
 .logo img {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }
 
-
 .right-side > div, .right-side > p, .form-text {
-  padding-left: 48px;
+  padding-left: 30px;
+}
+
+.text-above-form, form h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  margin-right: 64px;
 }
 
 .text-above-form p + p{
-  margin-top: 20px;
+  margin-top: 18px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-text {
   background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-  gap: 28px;
-}
-
-.left-col, .right-col {
+  padding-top: 18px;
+  padding-bottom: 18px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  gap: 12px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 5px 5px rgb(192, 191, 202);
 }
 
-button {
-  margin-left: 48px;
+.first-row, .second-row, .third-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+button, button + p {
+  margin-left: 30px;
   margin-top: 20px;
+}
+
+.text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgb(56, 56, 56);
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  font-size: 14px;
+  padding: 8px;
+  padding-left: 12px;
+  width: 180px;
+  height: 6px;
+  border: solid 1px rgb(204, 204, 204);
+  border-radius: 3px;
+  margin-top: 3px;
+}
+
+input:focus {
+  box-shadow: none;
+  border-color: rgb(204, 204, 204);
 }
